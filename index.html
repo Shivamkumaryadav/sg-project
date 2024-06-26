@@ -12,7 +12,7 @@
     <nav class="bg-[#FAF9F6] border-b z-50 sticky top-0">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="w-20 h-10 obkect-fit flex items-center space-x-3 rtl:space-x-reverse">
-                <img style="mix-blend-mode: multiply;" src="./images/logo.jpg" class="object-cover font-bold text-2xl"
+                <img style="mix-blend-mode: multiply;" src="./images/log.jpg" class="object-cover font-bold text-2xl"
                     alt="Logo" />
             </a>
             <button data-collapse-toggle="navbar-solid-bg" type="button"
@@ -35,11 +35,11 @@
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 md:p-0 text-orange-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700  ">Services</a>
+                            class="block py-2 px-3 md:p-0 text-orange-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700  ">About</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 md:p-0 text-orange-400 rounded hover:bg-white md:hover:bg-transparent md:border-0 md:hover:text-blue-700  ">Pricing</a>
+                            class="block py-2 px-3 md:p-0 text-orange-400 rounded hover:bg-white md:hover:bg-transparent md:border-0 md:hover:text-blue-700  ">Teams</a>
                     </li>
                     <li>
                         <a href="#"
@@ -57,74 +57,85 @@
 
 
     <!-- slider -->
-<!-- Slider -->
-<div data-hs-carousel='{
-    "loadingClasses": "opacity-0",
-    "isAutoPlay": true
-  }' class="relative">
-    <div class="hs-carousel relative overflow-hidden w-full min-h-96 bg-white rounded-lg">
-        <div
-            class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
-            <div class="hs-carousel-slide">
-                <div class="flex justify-center h-full bg-gray-100 p-6 dark:bg-neutral-900">
-                    <span class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white">
-                        <img src="./images/slider1.jpg" alt="">
-                    </span>
-                </div>
+    <div id="carouselExampleCaptions" class="relative" data-twe-carousel-init data-twe-ride="carousel">
+        <!--Carousel indicators-->
+        <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+            data-twe-carousel-indicators>
+            <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="0"
+                data-twe-carousel-active
+                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="1"
+                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                aria-label="Slide 2"></button>
+            <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="2"
+                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                aria-label="Slide 3"></button>
+            <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="3"
+                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                aria-label="Slide 3"></button>
+        </div>
+
+        <!--Carousel items-->
+        <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+            <!--First item-->
+            <div class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-twe-carousel-active data-twe-carousel-item style="backface-visibility: hidden">
+                <img src="./images/slider1.jpg" class="object-fit block w-full h-72 md:h-[27rem]" alt="..." />
+
             </div>
-            <div class="hs-carousel-slide">
-                <div class="flex justify-center h-full bg-gray-200 p-6 dark:bg-neutral-800">
-                    <span class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white">
-                        <img src="./images/slider2.jpg" alt="">
-                    </span>
-                </div>
+            <!--Second item-->
+            <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-twe-carousel-item style="backface-visibility: hidden">
+                <img src="./images/slider2.jpg" class="object-fit block w-full h-72 md:h-[27rem]" alt="..." />
+
             </div>
-            <div class="hs-carousel-slide">
-                <div class="flex justify-center h-full bg-gray-300 p-6 dark:bg-neutral-700">
-                    <span class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white">
-                        <img src="./images/slider3.jpg" alt="">
-                    </span>
-                </div>
+            <!--Third item-->
+            <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-twe-carousel-item style="backface-visibility: hidden">
+                <img src="./images/slider3.jpg" class="object-fit block w-full h-72 md:h-[27rem]" alt="..." />
+
+            </div>
+            <!--FOurth item-->
+            <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-twe-carousel-item style="backface-visibility: hidden">
+                <img src="./images/slider4.jpg" class="object-fit block w-full h-72 md:h-[27rem]" alt="..." />
+
             </div>
         </div>
+
+        <!--Carousel controls - prev item-->
+        <button
+            class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide="prev">
+            <span class="inline-block h-8 w-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </span>
+            <span
+                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
+        </button>
+        <!--Carousel controls - next item-->
+        <button
+            class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide="next">
+            <span class="inline-block h-8 w-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </span>
+            <span
+                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
+        </button>
     </div>
 
-    <button type="button"
-        class="hs-carousel-prev hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 rounded-s-lg dark:text-white dark:hover:bg-white/10">
-        <span class="text-2xl" aria-hidden="true">
-            <svg class="flex-shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="m15 18-6-6 6-6"></path>
-            </svg>
-        </span>
-        <span class="sr-only">Previous</span>
-    </button>
-    <button type="button"
-        class="hs-carousel-next hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 rounded-e-lg dark:text-white dark:hover:bg-white/10">
-        <span class="sr-only">Next</span>
-        <span class="text-2xl" aria-hidden="true">
-            <svg class="flex-shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="m9 18 6-6-6-6"></path>
-            </svg>
-        </span>
-    </button>
-
-    <div class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2">
-        <span
-            class="hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500"></span>
-        <span
-            class="hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500"></span>
-        <span
-            class="hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500"></span>
-    </div>
-</div>
-<!-- End Slider -->
+    <!-- End Slider -->
 
     <!-- why choose us -->
-    <div class="md:grid grid-cols-2 gap-5 p-5">
+    <div class="md:grid grid-cols-2 gap-5 p-5 mt-5 ">
         <div class="w-full order-0 md:order">
             <img style="mix-blend-mode: multiply;" src="./images/choose.jpg" class="" alt="">
         </div>
@@ -132,7 +143,7 @@
             <h2 class="uppercase text-3xl mb-8 font-bold text-orange-400">Why choose us?</h2>
             <h3 class="text-xl md:my-3 text-black font-bold">We bring solutions to make life easier for our clients.
             </h3>
-            <p class="md:ml-4 mt-5 md:mt-10">At SG Technologies, we are dedicated to providing interns with a
+            <p class="md:ml-4 mt-5 md:mt-10">At S Technologies, we are dedicated to providing interns with a
                 transformative experience that serves as a solid foundation for their future career.
                 Join us and unlock your potential in a dynamic and supportive environment. Apply today and take the
                 first step towards an exciting internship opportunity.
@@ -148,7 +159,7 @@
             <div class="text-center ">
                 <div class="flex justify-center items-center space-x-2  my-3">
                     <div class="w-12 h-[2px] bg-orange-400 "></div>
-                    <h2 class="text-orange-400 text-2xl font-bold uppercase">Internships we offer</h2>
+                    <h2 class="text-orange-400 text-lg md:text-2xl font-bold uppercase">Internships we offer</h2>
                     <div class="w-12 h-[2px] bg-orange-400 "></div>
                 </div>
                 <h3 class="font-bold text-xl text-gray-700/90 my-8">Check out some awesome projects with creative ideas
@@ -175,7 +186,8 @@
                     </div>
 
                     <div class="my-3">
-                        <a href="" class="bg-orange-400 text-white rounded-full font-bold sadow px-2 py-2 my-3">Apply
+                        <a href=""
+                            class="bg-orange-400 text-white rounded-full font-semibold sadow px-3 py-2 my-3">Apply
                             Now</a>
                     </div>
                 </div>
@@ -183,7 +195,7 @@
                 <div style="box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;"
                     class="p-5 bg-white shadow-2xl scale-95 rounded-md hover:scale-100 transition-all ease-in-out delay-100">
                     <div class="h-52 md:h-72">
-                        <img class="object-stretch h-full w-full " src="./images/web.png" alt="web-development">
+                        <img class="object-stretch h-full w-full " src="./images/java.jpg" alt="web-development">
                     </div>
                     <div class="p-2">
                         <h3 class="mb-3 font-bold text-black">Java Programming</h3>
@@ -198,7 +210,8 @@
                     </div>
 
                     <div class="my-3">
-                        <a href="" class="bg-orange-400 text-white rounded-full font-bold sadow px-2 py-2 my-3">Apply
+                        <a href=""
+                            class="bg-orange-400 text-white rounded-full font-semibold sadow px-3 py-2 my-3">Apply
                             Now</a>
                     </div>
                 </div>
@@ -222,7 +235,8 @@
                     </div>
 
                     <div class="my-3">
-                        <a href="" class="bg-orange-400 text-white rounded-full font-bold sadow px-2 py-2 my-3">Apply
+                        <a href=""
+                            class="bg-orange-400 text-white rounded-full font-semibold sadow px-3 py-2 my-3">Apply
                             Now</a>
                     </div>
                 </div>
@@ -240,19 +254,21 @@
             </div>
 
             <p class="text-black/70 word-break">
-                At SG Tech technology, our team is driven by a shared passion for education and commitment to providing the best learning experiences for our students.
-                We believe that education has the power to transform lives, and we're dedicated to making that transformation possible.
+                At STech technology, our team is driven by a shared passion for education and commitment to providing
+                the best learning experiences for our students.
+                We believe that education has the power to transform lives, and we're dedicated to making that
+                transformation possible.
                 Get to know the individuals who make our educational institution exceptional.
             </p>
 
-            <div class="md:grid grid-cols-2 gap-5 my-5">
-                <div class="bg-white drop-shadow-2xl flex p-5 space-x-3">
+            <div class="md:grid grid-cols-2 gap-5 my-5 space-y-5 md:space-y-0 ">
+                <div class="bg-white drop-shadow-2xl flex p-5 space-x-3 hover:scale-90">
                     <div class="">
                         <div class="flex space-x-5 items-center md:items-start">
-                            <img src="./images/andriod.jpg" class="border-orange-400 object-fit rounded-full border w-32"
+                            <img src="./images/owner.jpg" class="object-fit rounded-full w-32 scale-90 hover:scale-100"
                                 alt="shivam-image">
                             <div class="mt-0 md:mt-3">
-                                <h1 class="font-semibold uppercase text-orange-400">Shubham Gupta</h1>
+                                <h1 class="font-semibold uppercase text-orange-400">sonam Gupta</h1>
                                 <span class="border-b-2 border-orange-400 font-semibold">Owner</span>
                             </div>
                         </div>
@@ -260,22 +276,20 @@
 
                             <p class="text-sm my-3">Under <span class="font-semibold text-orange-400"> Mr. Shubham Gupta
                                 </span>
-                                leadership, SgTech Technology has grown up from
+                                leadership, STech Technology has grown up from
                                 a startup with a bold vision of leading provider of cutting-edege education manager
                                 software.
                             </p>
 
                             <div class="flex space-x-5 mt-5">
                                 <a href="">
-                                    <img class="w-8 rounded-full opacity-80" src="./images/instagram (1).png" alt="">
+                                    <img class="w-8 rounded-full opacity-80" src="./images/gmail.png" alt="">
                                 </a>
-                                <a href="">
-                                    <img class="w-8 rounded-full opacity-80" src="./images/facebook.png" alt="">
-                                </a>
+
                                 <a href="">
                                     <img class="w-8 rounded-full opacity-80" src="./images/linkedin.png" alt="">
                                 </a>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -283,36 +297,37 @@
 
 
                 </div>
-                <div class="bg-white drop-shadow-2xl flex p-5 space-x-3">
+                <div class="bg-white drop-shadow-2xl flex p-5 space-x-3 hover:scale-90">
                     <div class="">
-                        <div class="flex space-x-5 items-center md:items-start">
-                            <img src="./images/andriod.jpg" class="border-orange-400 object-fit rounded-full border w-32"
+                        <div class="flex space-x-5 items-center md:items-start ">
+                            <img src="./images/s-gupta.jpg"
+                                class="object-fit rounded-full w-32 scale-90 hover:scale-100 transition-all delay-300 ease-out"
                                 alt="vivek-image">
                             <div class="mt-0 md:mt-3">
-                                <h1 class="font-semibold uppercase text-orange-400">Vivek Yadav</h1>
+                                <h1 class="font-semibold uppercase text-orange-400">S Gupta</h1>
                                 <span class="border-b-2 border-orange-400 font-semibold">CEO</span>
                             </div>
                         </div>
-                        <div class="md:pl-36 md:-mt-16">
+                        <div class="md:pl-36 md:-mt-16 ">
 
-                            <p class="text-sm my-3">As the visionary leader, of SG Tech technology <span class="font-semibold text-orange-400"> Mr. Vivek Yadav
+                            <p class="text-sm my-3">As the visionary leader, of SGTech technology <span
+                                    class="font-semibold text-orange-400"> Mr. Vivek Yadav
                                 </span>
-                                brings a wealth of experience in IT Software sector and a deep passion for leveraging technology to improve education. SgTech Technology has grown up from
+                                brings a wealth of experience in IT Software sector and a deep passion for leveraging
+                                technology to improve education. STech Technology has grown up from
                                 a startup with a bold vision of leading provider of cutting-edege education manager
                                 software.
                             </p>
 
                             <div class="flex space-x-5 mt-5">
                                 <a href="">
-                                    <img class="w-8 rounded-full opacity-80" src="./images/instagram (1).png" alt="">
+                                    <img class="w-8 rounded-full opacity-80" src="./images/gmail.png" alt="">
                                 </a>
-                                <a href="">
-                                    <img class="w-8 rounded-full opacity-80" src="./images/facebook.png" alt="">
-                                </a>
+
                                 <a href="">
                                     <img class="w-8 rounded-full opacity-80" src="./images/linkedin.png" alt="">
                                 </a>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -320,11 +335,11 @@
 
 
                 </div>
-                <div class="bg-white drop-shadow-2xl flex p-5 space-x-3">
+                <!-- <div class="bg-white drop-shadow-2xl flex p-5 space-x-3">
                     <div class="">
                         <div class="flex space-x-5 items-center md:items-start">
-                            <img src="./images/andriod.jpg" class="border-orange-400 object-fit rounded-full border w-32"
-                                alt="jitendra-image">
+                            <img src="./images/andriod.jpg"
+                                class="border-orange-400 object-fit rounded-full border w-32" alt="jitendra-image">
                             <div class="mt-0 md:mt-3">
                                 <h1 class="font-semibold uppercase text-orange-400">Jitendra Yadav</h1>
                                 <span class="border-b-2 border-orange-400 font-semibold">Managing Director</span>
@@ -334,7 +349,9 @@
 
                             <p class="text-sm my-3"><span class="font-semibold text-orange-400"> Mr. Jitendra Yadav
                                 </span>
-                                is the MD of firm and his dedication to innovation and their unwavering belief in the power of education drive SG Tech technology's mission to empower educators and institutions.
+                                is the MD of firm and his dedication to innovation and their unwavering belief in the
+                                power of education drive STech technology's mission to empower educators and
+                                institutions.
                             </p>
 
                             <div class="flex space-x-5 mt-5">
@@ -347,7 +364,7 @@
                                 <a href="">
                                     <img class="w-8 rounded-full opacity-80" src="./images/linkedin.png" alt="">
                                 </a>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -355,11 +372,11 @@
 
 
                 </div>
-                <div class="bg-white drop-shadow-2xl flex p-5 space-y-5 space-x-3 scale-75 hover:scale-100 ease-in-out">
+                <div class="bg-white drop-shadow-2xl flex p-5 space-y-5 space-x-3 ">
                     <div class="">
                         <div class="flex space-x-5 items-center md:items-start">
-                            <img src="./images/andriod.jpg" class="border-orange-400 object-fit rounded-full border w-32"
-                                alt="shivam-image">
+                            <img src="./images/andriod.jpg"
+                                class="border-orange-400 object-fit rounded-full border w-32" alt="shivam-image">
                             <div class="mt-0 md:mt-3">
                                 <h1 class="font-semibold uppercase text-orange-400">Pankaj Kumar</h1>
                                 <span class="border-b-2 border-orange-400 font-semibold">Director</span>
@@ -369,7 +386,8 @@
 
                             <p class="text-sm my-3"><span class="font-semibold text-orange-400"> Mr. Pankaj Kumar
                                 </span>
-                                is director of the company with the mission of digital education world and under his leadership. We have grown into a leading provider of education management software.
+                                is director of the company with the mission of digital education world and under his
+                                leadership. We have grown into a leading provider of education management software.
                             </p>
 
                             <div class="flex space-x-5 mt-5">
@@ -382,34 +400,113 @@
                                 <a href="">
                                     <img class="w-8 rounded-full opacity-80" src="./images/linkedin.png" alt="">
                                 </a>
-                                
+
                             </div>
                         </div>
                     </div>
 
 
 
-                </div>
-                
-               
+                </div> -->
+
+
             </div>
         </section>
 
 
 
         <!-- contact us -->
-        <div class="md:grid grid-cols-2 gap-5">
-            <div class="w-[25rem]">
-                <!-- <img class="w-full" src="./images/contact.jpg" alt=""> -->
-            </div>
-
-            <div>
-
+        <div class="px-5 my-10">
+            <div class="flex justify-center items-center space-x-2">
+                <div class="w-12 h-[2px] bg-orange-400 "></div>
+                <h1 class="text-center text-xl text-orange-400 font-bold">Contact Us</h1>
+                <div class="w-12 h-[2px] bg-orange-400 "></div>
             </div>
         </div>
 
+        <div
+            class="md:grid grid-cols-3 md:gap-20 block bg-gray-100 md:bg-white space-y-5 md:space-y-0 px-8 py-5 md:p-0">
+
+            <div class="md:p-5 bg-gray-100">
+                <h3 class="font-semibold text-xl ">Mail us </h3>
+                <div class="flex space-x-5 ">
+                    <img src="./images/gmail.png" alt="" class="w-8 ">
+                    <div>
+                        <a class="text-blue-600 hover:text-underline"
+                            href="https://mail.google.com/mail/u/0/#inbox?compose=new">
+                            sgtechtechnology@gmail.com
+                        </a>
+                    </div>
+                </div>
+                </p>
+            </div>
+            <div class="md:p-5 bg-gray-100 ">
+                <h3 class="font-semibold text-xl ">Contact </h3>
+                <div class="flex space-x-5 ">
+                    <img src="./images/telephone.png" alt="" class="w-8 ">
+                    <div>
+                        +91 9455488537
+                    </div>
+                </div>
+                </p>
+            </div>
+            <div class="md:p-5 bg-gray-100">
+                <h3 class="font-semibold text-xl ">Mail us at </h3>
+                <div class="flex space-x-5 ">
+                    <img src="./images/gmail.png" alt="" class="w-8 ">
+                    <div>
+                        info@edusoft.com
+                    </div>
+                </div>
+                </p>
+            </div>
+
+        </div>
 
 
+        <div class=" my-8 md:grid grid-cols-2 gap-5 space-y-5 md:space-y-0">
+            <div class="hidden md:block">
+                <img class="w-" src="./images/contact1.jpg" alt="">
+            </div>
+
+            <div class="bg-white shadow-2xl px-5 border border-orange-400 py-3 md:py-0 ">
+                <h2 class="text-start md:text-center font-semibold text-lg text-orange-400 my-2">We had love to
+                    hear from
+                    you. Send your message.</h2>
+                <form action="" method="POST" class="form">
+                    <div>
+                        <input class="name border border-gray-300 rounded w-full py-1 px-2 my-3" type="text"
+                            placeholder="Your name">
+                        <p class="name-error -mt-3 text-red-400 text-sm" />
+                    </div>
+
+                    <div>
+                        <input class="email border border-gray-300 rounded w-full my-3 px-2 py-1" type="email"
+                            placeholder="Your eamil">
+                        <p class="email-error -mt-3 text-red-400 text-sm" />
+
+                    </div>
+
+                    <div>
+                        <textarea class="message border border-gray-300 rounded w-full my-3 px-2 py-1" name="msg" id=""
+                            cols="3" rows="3" placeholder="Type your message here.."></textarea>
+                            <p class="msg-error -mt-3 text-red-400 text-sm mb-5" />
+                    </div>
+
+                    <div>
+                        <button class="bg-orange-400 text-white py-2 px-5 rounded-full hover:bg-orange-500">
+                            Send Message
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
     </div>
 
     <!-- footer -->
@@ -426,13 +523,13 @@
                         <a href="#" class="hover:underline me-4 md:me-6">About</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                        <a href="#" class="hover:underline me-4 md:me-6">Teams</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                        <a href="#" class="hover:underline me-4 md:me-6">Contact</a>
                     </li>
                     <li>
-                        <a href="#" class="hover:underline">Contact</a>
+                        <a href="#" class="hover:underline">Live Classes</a>
                     </li>
                 </ul>
                 <div>
@@ -469,6 +566,7 @@
     </footer>
 
     <!--  -->
+    <script src="./js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 
