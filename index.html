@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <title class="flex space-x-3">
+        SGTech Technology
+    </title>
 </head>
 
 <body>
@@ -30,20 +33,20 @@
                     class="flex flex-col font-serif md:items-center font-medium mt-4 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent ">
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 md:p-0 text-orange-400 hover:text-blue-700  rounded md:bg-transparent"
+                            class="nav-links block py-2 px-3 md:p-0 text-orange-400 hover:text-orange-400  rounded md:bg-transparent"
                             aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="block py-2 px-3 md:p-0 text-orange-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700  ">About</a>
+                        <a href="#about"
+                            class="nav-links block py-2 px-3 md:p-0 hover:text-orange-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 ">About</a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="block py-2 px-3 md:p-0 text-orange-400 rounded hover:bg-white md:hover:bg-transparent md:border-0 md:hover:text-blue-700  ">Teams</a>
+                        <a href="#teams"
+                            class="nav-links block py-2 px-3 md:p-0 hover:text-orange-400 rounded hover:bg-white md:hover:bg-transparent md:border-0 ">Teams</a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="block py-2 px-3 md:p-0 text-orange-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700  ">Contact</a>
+                        <a href="#contact-us"
+                            class="nav-links block py-2 px-3 md:p-0 hover:text-orange-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 ">Contact</a>
                     </li>
                     <li>
                         <a href="#"
@@ -55,95 +58,85 @@
         </div>
     </nav>
 
-
     <!-- slider -->
-    <div id="carouselExampleCaptions" class="relative" data-twe-carousel-init data-twe-ride="carousel">
-        <!--Carousel indicators-->
-        <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-            data-twe-carousel-indicators>
-            <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="0"
-                data-twe-carousel-active
-                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="1"
-                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-                aria-label="Slide 2"></button>
-            <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="2"
-                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-                aria-label="Slide 3"></button>
-            <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="3"
-                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-                aria-label="Slide 3"></button>
-        </div>
-
-        <!--Carousel items-->
-        <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-            <!--First item-->
-            <div class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-twe-carousel-active data-twe-carousel-item style="backface-visibility: hidden">
-                <img src="./images/slider1.jpg" class="object-fit block w-full h-72 md:h-[27rem]" alt="..." />
-
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative overflow-hidden rounded-lg h-56 md:h-96 lg:h-[500px]">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="./images/slider1.jpg" class="absolute w-full h-full object-fit" alt="...">
             </div>
-            <!--Second item-->
-            <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-twe-carousel-item style="backface-visibility: hidden">
-                <img src="./images/slider2.jpg" class="object-fit block w-full h-72 md:h-[27rem]" alt="..." />
-
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="./images/slider1.jpg" class="absolute w-full h-full object-fit" alt="...">
             </div>
-            <!--Third item-->
-            <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-twe-carousel-item style="backface-visibility: hidden">
-                <img src="./images/slider3.jpg" class="object-fit block w-full h-72 md:h-[27rem]" alt="..." />
-
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="./images/slider2.jpg" class="absolute w-full h-full object-fit" alt="...">
             </div>
-            <!--FOurth item-->
-            <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-twe-carousel-item style="backface-visibility: hidden">
-                <img src="./images/slider4.jpg" class="object-fit block w-full h-72 md:h-[27rem]" alt="..." />
-
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="./images/slider3.jpg" class="absolute w-full h-full object-fit" alt="...">
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="./images/slider4.jpg" class="absolute w-full h-full object-fit" alt="...">
             </div>
         </div>
-
-        <!--Carousel controls - prev item-->
-        <button
-            class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-            type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide="prev">
-            <span class="inline-block h-8 w-8">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="h-6 w-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                </svg>
-            </span>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                data-carousel-slide-to="4"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
             <span
-                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
         </button>
-        <!--Carousel controls - next item-->
-        <button
-            class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-            type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide="next">
-            <span class="inline-block h-8 w-8">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="h-6 w-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                </svg>
-            </span>
+        <button type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
             <span
-                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
         </button>
     </div>
 
-    <!-- End Slider -->
+
 
     <!-- why choose us -->
-    <div class="md:grid grid-cols-2 gap-5 p-5 mt-5 ">
-        <div class="w-full order-0 md:order">
-            <img style="mix-blend-mode: multiply;" src="./images/choose.jpg" class="" alt="">
+    <div id="about" class="md:grid grid-cols-2 gap-5 p-5 mt-5 ">
+        <div class="w-full">
+            <img style="mix-blend-mode: multiply;" src="./images/choose.jpg" class=" w-full h-3/4" alt="">
         </div>
-        <div class="p-5 flex flex-col justify-center">
+        <div class="p-5 flex flex-col justify-cente">
             <h2 class="uppercase text-3xl mb-8 font-bold text-orange-400">Why choose us?</h2>
             <h3 class="text-xl md:my-3 text-black font-bold">We bring solutions to make life easier for our clients.
             </h3>
-            <p class="md:ml-4 mt-5 md:mt-10">At S Technologies, we are dedicated to providing interns with a
+            <p class=" mt-5">At S Technologies, we are dedicated to providing interns with a
                 transformative experience that serves as a solid foundation for their future career.
                 Join us and unlock your potential in a dynamic and supportive environment. Apply today and take the
                 first step towards an exciting internship opportunity.
@@ -245,7 +238,7 @@
         </div>
 
         <!-- our teams -->
-        <section class="px-3 mt-10">
+        <section id="teams" class="px-3 mt-10">
 
             <div class="flex justify-center items-center space-x-2">
                 <div class="w-12 h-[2px] bg-orange-400 "></div>
@@ -268,15 +261,15 @@
                             <img src="./images/owner.jpg" class="object-fit rounded-full w-32 scale-90 hover:scale-100"
                                 alt="shivam-image">
                             <div class="mt-0 md:mt-3">
-                                <h1 class="font-semibold uppercase text-orange-400">sonam Gupta</h1>
+                                <h1 class="font-semibold uppercase text-orange-400">Sonam Gupta</h1>
                                 <span class="border-b-2 border-orange-400 font-semibold">Owner</span>
                             </div>
                         </div>
                         <div class="md:pl-36 md:-mt-16">
 
-                            <p class="text-sm my-3">Under <span class="font-semibold text-orange-400"> Mr. Shubham Gupta
+                            <p class="text-sm my-3">Under <span class="font-semibold text-black"> "sonam Gupta"
                                 </span>
-                                leadership, STech Technology has grown up from
+                                leadership, SGTech Technology has grown up from
                                 a startup with a bold vision of leading provider of cutting-edege education manager
                                 software.
                             </p>
@@ -311,10 +304,10 @@
                         <div class="md:pl-36 md:-mt-16 ">
 
                             <p class="text-sm my-3">As the visionary leader, of SGTech technology <span
-                                    class="font-semibold text-orange-400"> Mr. Vivek Yadav
+                                    class="font-semibold text-black"> "S Gupta"
                                 </span>
                                 brings a wealth of experience in IT Software sector and a deep passion for leveraging
-                                technology to improve education. STech Technology has grown up from
+                                technology to improve education. SGTech Technology has grown up from
                                 a startup with a bold vision of leading provider of cutting-edege education manager
                                 software.
                             </p>
@@ -416,7 +409,7 @@
 
 
         <!-- contact us -->
-        <div class="px-5 my-10">
+        <div id="contact-us" class="px-5 my-10">
             <div class="flex justify-center items-center space-x-2">
                 <div class="w-12 h-[2px] bg-orange-400 "></div>
                 <h1 class="text-center text-xl text-orange-400 font-bold">Contact Us</h1>
@@ -425,9 +418,9 @@
         </div>
 
         <div
-            class="md:grid grid-cols-3 md:gap-20 block bg-gray-100 md:bg-white space-y-5 md:space-y-0 px-8 py-5 md:p-0">
+            class="md:grid grid-cols-3 space-y-5 md:space-y-0 md:gap-20 block  md:bg-white space-y-5 md:space-y-0 px-3 py-5 md:p-0">
 
-            <div class="md:p-5 bg-gray-100">
+            <div class="md:p-5 bg-white drop-shadow-2xl p-3 rounded">
                 <h3 class="font-semibold text-xl ">Mail us </h3>
                 <div class="flex space-x-5 ">
                     <img src="./images/gmail.png" alt="" class="w-8 ">
@@ -440,7 +433,7 @@
                 </div>
                 </p>
             </div>
-            <div class="md:p-5 bg-gray-100 ">
+            <div class="md:p-5 bg-white drop-shadow-2xl p-3 rounded ">
                 <h3 class="font-semibold text-xl ">Contact </h3>
                 <div class="flex space-x-5 ">
                     <img src="./images/telephone.png" alt="" class="w-8 ">
@@ -450,7 +443,7 @@
                 </div>
                 </p>
             </div>
-            <div class="md:p-5 bg-gray-100">
+            <div class="md:p-5 bg-white drop-shadow-2xl p-3 rounded">
                 <h3 class="font-semibold text-xl ">Mail us at </h3>
                 <div class="flex space-x-5 ">
                     <img src="./images/gmail.png" alt="" class="w-8 ">
@@ -490,7 +483,7 @@
                     <div>
                         <textarea class="message border border-gray-300 rounded w-full my-3 px-2 py-1" name="msg" id=""
                             cols="3" rows="3" placeholder="Type your message here.."></textarea>
-                            <p class="msg-error -mt-3 text-red-400 text-sm mb-5" />
+                        <p class="msg-error -mt-3 text-red-400 text-sm mb-5" />
                     </div>
 
                     <div>
@@ -509,8 +502,9 @@
     </div>
     </div>
 
+
     <!-- footer -->
-    <footer class="bg-white rounded-lg shadow">
+    <!-- <footer class="bg-white rounded-lg shadow">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
             <div class="sm:flex sm:items-center sm:justify-between">
                 <a href="" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
@@ -563,9 +557,10 @@
                 © 2024 STech™. All Rights Reserved.
             </span>
         </div>
-    </footer>
+    </footer> -->
 
     <!--  -->
+    
     <script src="./js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>

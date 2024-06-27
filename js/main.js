@@ -1,3 +1,21 @@
+// Select all navigation links
+const navLinks = document.querySelectorAll(".nav-links");
+
+// Add click event listener to each link
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    // Remove 'text-orange-400' class from all links
+    navLinks.forEach((otherLink) => {
+      if (otherLink !== link) {
+        otherLink.classList.remove("text-orange-400");
+      }
+    });
+
+    // Add 'text-orange-400' class to the clicked link
+    link.classList.add("text-orange-400");
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.querySelector("#carouselExampleCaptions");
   const indicators = carousel.querySelectorAll("[data-twe-slide-to]");
