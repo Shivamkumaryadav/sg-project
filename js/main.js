@@ -16,71 +16,22 @@ navLinks.forEach((link) => {
   });
 });
 
+// thank you modal open
 document.addEventListener("DOMContentLoaded", function () {
-  const carousel = document.querySelector("#carouselExampleCaptions");
-  const indicators = carousel.querySelectorAll("[data-twe-slide-to]");
-  const items = carousel.querySelectorAll("[data-twe-carousel-item]");
-  const prevButton = carousel.querySelector('[data-twe-slide="prev"]');
-  const nextButton = carousel.querySelector('[data-twe-slide="next"]');
+  const thankYouModal = document.querySelector(".thank-you-modal");
+  console.log(thankYouModal);
 
-  let currentIndex = 0;
-  const intervalTime = 3000;
-  let interval;
+  setTimeout(() => {
+    thankYouModal.classList.remove("hidden");
+    thankYouModal.classList.add("flex");
+    // thankYouModal.classList.add("overscroll-none");
 
-  function updateCarousel(index) {
-    items.forEach((item, i) => {
-      item.classList.remove("hidden", "translate-x-full");
-      item.classList.remove("block", "translate-x-0");
+  }, 3000);
 
-      // Apply Tailwind CSS transition classes
-      if (i === index) {
-        item.classList.add(
-          "block",
-          "translate-x-0",
-          "transition-transform",
-          "ease-in-out",
-          "duration-300"
-        );
-      } else {
-        item.classList.add("hidden", "translate-x-full");
-      }
-    });
-
-    indicators.forEach((indicator, i) => {
-      indicator.classList.toggle("opacity-50", i !== index);
-      indicator.classList.toggle("opacity-100", i === index);
-    });
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % items.length;
-    updateCarousel(currentIndex);
-  }
-
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + items.length) % items.length;
-    updateCarousel(currentIndex);
-  }
-
-  function setSlide(index) {
-    currentIndex = index;
-    updateCarousel(currentIndex);
-  }
-
-  nextButton.addEventListener("click", nextSlide);
-  prevButton.addEventListener("click", prevSlide);
-
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener("click", () => setSlide(index));
-  });
-
-  // Automatic sliding every 3 seconds
-  interval = setInterval(nextSlide, intervalTime);
-
-  // Pause on hover
-  carousel.addEventListener("mouseenter", () => clearInterval(interval));
-  carousel.addEventListener("mouseleave", () => {
-    interval = setInterval(nextSlide, intervalTime);
+  const closeModalButton = document.querySelector(".close-modal");
+  closeModalButton.addEventListener("click", () => {
+    thankYouModal.classList.remove("flex");
+    thankYouModal.classList.add("hidden");
   });
 });
 
@@ -94,9 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const nameError = document.querySelector(".name-error");
   const emailError = document.querySelector(".email-error");
   const msgError = document.querySelector(".msg-error");
-  const successMsg = document.querySelector(".success-msg");
-  const successText = document.querySelector(".success-text");
+  const closeSubmissionModal = document.querySelector(".close-submission-modal");
+  const openSubmissionModal = document.querySelector(".contact-submission-modal");
 
+  closeSubmissionModal.addEventListener('click', () => { 
+    closeSubmissionModal.classList.remove("flex");
+    closeSubmissionModal.classList.add("hidden");
+   });
   // console.log(form,userName);
   function sendEmail() {
     const params = {
@@ -115,9 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
         userEmail.value = "";
         userMessage.value = "";
         setTimeout(() => {
-          successMsg.classList.remove("hidden");
-          successText.innerHTML =
-            "<img src='assets/img/checked.png' width='25px'> Message sent successfully!";
+          openSubmissionModal.classList.remove("hidden");
+          openSubmissionModal.classList.add("flex");
         }, 0);
         setTimeout(() => {
           successMsg.classList.add("hidden");
