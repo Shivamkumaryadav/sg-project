@@ -19,13 +19,10 @@ navLinks.forEach((link) => {
 // thank you modal open
 document.addEventListener("DOMContentLoaded", function () {
   const thankYouModal = document.querySelector(".thank-you-modal");
-  console.log(thankYouModal);
 
   setTimeout(() => {
     thankYouModal.classList.remove("hidden");
     thankYouModal.classList.add("flex");
-    // thankYouModal.classList.add("overscroll-none");
-
   }, 3000);
 
   const closeModalButton = document.querySelector(".close-modal");
@@ -47,10 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const msgError = document.querySelector(".msg-error");
   const closeSubmissionModal = document.querySelector(".close-submission-modal");
   const openSubmissionModal = document.querySelector(".contact-submission-modal");
+  // console.log(closeSubmissionModal);
 
   closeSubmissionModal.addEventListener('click', () => { 
-    closeSubmissionModal.classList.remove("flex");
-    closeSubmissionModal.classList.add("hidden");
+    openSubmissionModal.classList.remove("flex");
+    openSubmissionModal.classList.add("hidden");
    });
   // console.log(form,userName);
   function sendEmail() {
