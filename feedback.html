@@ -10,16 +10,7 @@
     <title class="flex space-x-3">
         SGTech Technology - Best software company in Noida
     </title>
-    <style>
-        #testimonial-slider {
-            width: 300%;
-            /* Adjust based on the number of items */
-        }
-
-        .overflow-hidden {
-            overflow: hidden;
-        }
-    </style>
+   
 </head>
 
 <body>
@@ -82,7 +73,7 @@
                 <ul
                     class="flex flex-col font-serif md:items-center font-medium mt-4 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent ">
                     <li>
-                        <a href="#"
+                        <a href="index.html"
                             class="nav-links block py-2 px-3 md:p-0 text-orange-400 hover:text-orange-400  rounded md:bg-transparent"
                             aria-current="page">Home</a>
                     </li>
@@ -200,13 +191,13 @@
                             <div class="md:flex md:space-x-5 mt-6">
                                 <div class="my-3 md:my-0">
                                     <label for="yourName">Your Name :</label>
-                                    <input type="text" id="yourName" class="border-[1px] w-full mt-1 py-2 px-2 rounded"
+                                    <input type="text" id="yourName" required class="border-[1px] w-full mt-1 py-2 px-2 rounded"
                                         placeholder="Enter your name">
                                     <span id="nameError" class="text-red-500 text-sm hidden">Name is required</span>
                                 </div>
                                 <div>
                                     <label for="yourImage">Your Image :</label>
-                                    <input type="file" id="yourImage"
+                                    <input type="file" id="yourImage" required
                                         class="border bg-white w-full mt-1 py-[5px] px-2 rounded">
                                     <span id="imageError" class="text-red-500 text-sm hidden">Image is required</span>
                                 </div>
@@ -214,7 +205,7 @@
 
                             <div class="my-5">
                                 <label for="collegeName">College Name :</label>
-                                <input type="text" id="collegeName" class="border px-2 py-2 rounded w-full"
+                                <input type="text"  required id="collegeName" class="border px-2 py-2 rounded w-full"
                                     placeholder="Enter your college/Institute name">
                                 <span id="collegeError" class="text-red-500 text-sm hidden">College name is
                                     required</span>
@@ -222,7 +213,7 @@
 
                             <div class="my-5">
                                 <label for="feedback">Your Feedback :</label>
-                                <textarea rows="4" id="feedback" class="border px-2 py-2 rounded w-full"
+                                <textarea required rows="4" id="feedback" class="border px-2 py-2 rounded w-full"
                                     placeholder="Your valuable feedback"></textarea>
                                 <span id="feedbackError" class="text-red-500 text-sm hidden">Feedback is required</span>
                             </div>
@@ -242,9 +233,29 @@
     </div>
 
 
+<!--  -->
+<!-- <div class="flex gap-10 overflow-idden">
+    <div class="w-[381px] h-[252px] bg-white shadow-2xl rounded-2xl relative pt-">
+        <div class="bg-orange-500 w-full h-full absolute top-0 -z-30 rotate-12 rounded-2xl"></div>
+    
+        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+            <img class="w-20 h-20 rounded-full object-cover" src="./images/s-gupta.jpg" alt="">
+        </div>
+    
+        <div class="py-5">
+            <h3 class="text-center mt-16 font-semibold text-xl">Vivek Yadav</h3>
+            <p class="px-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolore modi optio neque
+                alias deserunt, animi aperiam repellendus tempore facere temporibus illum perspiciatis similique rem
+                obcaecati autem molestias, ratione ipsam!
+            </p>
+        </div>
+    </div>
+   
+</div> -->
+
 
  
-<!--  -->
+<!-- feedback thank you modal -->
 <div class="hidden feedback-modal backdrop-blur-sm bg-black/50 fixed inset-0 z-50 flex justify-center items-center">
     <div class="relative p-4 w-full max-w-md">
         <div class="relative bg-white rounded-lg shadow">
@@ -290,7 +301,7 @@
             <img style="mix-blend-mode : multiply;" src="./images/logo.jpg " alt="logo-ct" class="w-20 object-cover" />
             <ul class="flex flex-wrap items-center gap-y-2 gap-x-8">
                 <li>
-                    <a href="#about"
+                    <a href="about-our-company.html"
                         class="block font-sans text-base antialiased font-normal leading-relaxed transition-colors text-black  hover:text-white ">
                         About
                     </a>

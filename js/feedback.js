@@ -99,3 +99,34 @@ document
   });
 
 // testimonials slider
+const slider = document.getElementById("slider");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+let currentIndex = 0;
+const cardWidth = document.querySelector(".card").offsetWidth;
+const totalCards = document.querySelectorAll(".card").length;
+const visibleCards = 3;
+const maxIndex = totalCards - visibleCards;
+
+function updateSliderPosition() {
+  slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+nextBtn.addEventListener("click", () => {
+  if (currentIndex < maxIndex) {
+    currentIndex++;
+    updateSliderPosition();
+  }
+});
+
+prevBtn.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateSliderPosition();
+  }
+});
+
+window.addEventListener("resize", () => {
+  updateSliderPosition();
+});
