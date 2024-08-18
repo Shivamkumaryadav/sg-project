@@ -58,21 +58,44 @@ document
         feedback: feedbackField.value, // Ensure this matches your template's placeholder
         email: "Sgtechtechnology@gmail.com",
       };
-        console.log(templateParams);
+      console.log(templateParams);
       // Send the email using EmailJS
       const serviceId = "service_fnjdx6h";
       const templateId = "template_h4ujl7o";
       emailjs.send(serviceId, templateId, templateParams).then(
         function (response) {
-          alert("Feedback sent successfully!");
+          // Open the modal
+          openModal();
+
           // Optionally reset the form here
           document.getElementById("feedbackForm").reset();
+
+          // Automatically close the modal after 5 seconds
+          setTimeout(closeModal, 5000);
         },
         function (error) {
           alert("Failed to send feedback. Please try again.");
           console.error("EmailJS error:", error);
         }
       );
+
+      // Function to open the modal
+      function openModal() {
+        const modal = document.querySelector(".feedback-modal");
+        modal.classList.remove("hidden");
+      }
+
+      // Function to close the modal
+      function closeModal() {
+        const modal = document.querySelector(".feedback-modal");
+        modal.classList.add("hidden");
+      }
+
+      // Close the modal on button click
+      document
+        .querySelector(".close-submission-modal")
+        .addEventListener("click", closeModal);
     }
   });
 
+// testimonials slider
