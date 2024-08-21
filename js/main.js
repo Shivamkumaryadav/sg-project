@@ -1,14 +1,24 @@
 // Select all navigation links
 const navLinks = document.querySelectorAll(".nav-links");
 
-// Add click event listener to each link
+// Get the current URL
+const currentUrl = window.location.href;
+
+// Loop through each navigation link
 navLinks.forEach((link) => {
+  // If the href matches the current URL, add the active class
+  if (link.href === currentUrl) {
+    link.classList.add("text-orange-400");
+  } else {
+    // Otherwise, remove the active class
+    link.classList.remove("text-orange-400");
+  }
+
+  // Add click event listener to each link to handle manual clicks
   link.addEventListener("click", () => {
     // Remove 'text-orange-400' class from all links
     navLinks.forEach((otherLink) => {
-      if (otherLink !== link) {
-        otherLink.classList.remove("text-orange-400");
-      }
+      otherLink.classList.remove("text-orange-400");
     });
 
     // Add 'text-orange-400' class to the clicked link
@@ -42,14 +52,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const nameError = document.querySelector(".name-error");
   const emailError = document.querySelector(".email-error");
   const msgError = document.querySelector(".msg-error");
-  const closeSubmissionModal = document.querySelector(".close-submission-modal");
-  const openSubmissionModal = document.querySelector(".contact-submission-modal");
+  const closeSubmissionModal = document.querySelector(
+    ".close-submission-modal"
+  );
+  const openSubmissionModal = document.querySelector(
+    ".contact-submission-modal"
+  );
   // console.log(closeSubmissionModal);
 
-  closeSubmissionModal.addEventListener('click', () => { 
+  closeSubmissionModal.addEventListener("click", () => {
     openSubmissionModal.classList.remove("flex");
     openSubmissionModal.classList.add("hidden");
-   });
+  });
   // console.log(form,userName);
   function sendEmail() {
     const params = {
