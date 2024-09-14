@@ -1,0 +1,59 @@
+<div class="p-5">
+    <div class="relative max-w-[1140px] mx-auto">
+        <div id="cardSlider" class="flex items-center overflow-hidden justify-center gap-5">
+            <div class="p-3 bg-indigo-500 w-[205px] h-[350px] shrink-0">
+                <h3>Testing a card slider</h3>
+            </div>
+            <div class="p-3 bg-indigo-500 w-[205px] h-[350px] shrink-0">
+                <h3>Testing a card slider</h3>
+            </div>
+            <div class="p-3 bg-indigo-500 w-[205px] h-[350px] shrink-0">
+                <h3>Testing a card slider</h3>
+            </div>
+            <div class="p-3 bg-indigo-500 w-[205px] h-[350px] shrink-0">
+                <h3>Testing a card slider</h3>
+            </div>
+            <div class="p-3 bg-indigo-500 w-[205px] h-[350px] shrink-0">
+                <h3>Testing a card slider</h3>
+            </div>
+            <div class="p-3 bg-indigo-500 w-[205px] h-[350px] shrink-0">
+                <h3>Testing a card slider</h3>
+            </div>
+            <div class="p-3 bg-indigo-500 w-[205px] h-[350px] shrink-0">
+                <h3>Testing a card slider</h3>
+            </div>
+            <div class="p-3 bg-indigo-500 w-[205px] h-[350px] shrink-0">
+                <h3>Testing a card slider</h3>
+            </div>
+            <div class="p-3 bg-indigo-500 w-[205px] h-[350px] shrink-0">
+                <h3>Testing a card slider</h3>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    const cardSlider = document.getElementById('cardSlider');
+    const cardWidth = 205 + 20; // Card width + gap (300px + 20px gap)
+    let currentPosition = 0;
+
+    function autoSlide() {
+        const maxScrollLeft = cardSlider.scrollWidth - cardSlider.clientWidth;
+
+        // Slide to the next card
+        currentPosition += cardWidth;
+
+        // Reset to the beginning if at the end
+        if (currentPosition > maxScrollLeft) {
+            currentPosition = 0;
+        }
+
+        cardSlider.scrollTo({
+            left: currentPosition,
+            behavior: 'smooth'
+        });
+    }
+
+    setInterval(autoSlide, 3000); // Slide every 3 seconds
+</script>

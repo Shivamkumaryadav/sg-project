@@ -140,3 +140,48 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+  let hasAnimated = false;
+
+  const animateCounters = () => {
+    counters.forEach((counter) => {
+      const target = +counter.getAttribute("data-target");
+      const duration = 3000; // 3 seconds
+      const increment = target / (duration / 50); // Calculates increment based on 3-second duration, updates every 50ms
+
+      const updateCount = () => {
+        const current = +counter.innerText.trim();
+
+        if (current < target) {
+          counter.innerText = Math.ceil(current + increment);
+          setTimeout(updateCount, 50); // Updates every 50ms for smoother animation
+        } else {
+          counter.innerText = `${target}+`; // Final value with '+' sign
+        }
+      };
+
+      updateCount();
+    });
+  };
+
+  // Intersection Observer to trigger when the section enters the viewport
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          animateCounters();
+          hasAnimated = true; // Ensures animation only runs once
+        }
+      });
+    },
+    { threshold: 0.5 } // Starts when 50% of the section is visible
+  );
+
+  const section = document.querySelector("#stats-section");
+  observer.observe(section);
+});
+
+
+
