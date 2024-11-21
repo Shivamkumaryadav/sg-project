@@ -1,5 +1,5 @@
-const searchedCertificate = document.querySelector("#search-certificate"); 
-const searchResult = document.querySelector("#search-result"); 
+const searchedCertificate = document.querySelector("#search-certificate");
+const searchResult = document.querySelector("#search-result");
 
 // Array of certificates
 const certificates = [
@@ -79,44 +79,73 @@ const certificates = [
 
 // Function to show the modal
 function showModal() {
-    document.getElementById("popup-modal").classList.remove("hidden");
+  document.getElementById("popup-modal").classList.remove("hidden");
 }
 
 // Function to hide the modal
 function hideModal() {
-    document.getElementById("popup-modal").classList.add("hidden");
+  document.getElementById("popup-modal").classList.add("hidden");
 }
 
 // Add event listener for "close" button
 document.getElementById("close-modal").addEventListener("click", hideModal);
 document.getElementById("close-ok").addEventListener("click", hideModal);
 
-
 // Handle form submission
-document.getElementById('certificate-form').addEventListener('submit', function (event) {
+document
+  .getElementById("certificate-form")
+  .addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form reload
 
-    const certificateNumber = document.getElementById('certificate-number').value.trim();
-    const certificateDate = document.getElementById('certificate-date').value.trim();
+    const certificateNumber = document
+      .getElementById("certificate-number")
+      .value.trim();
+    const rawDateInput = document
+      .getElementById("certificate-date")
+      .value.trim();
+
+    // Normalize the date format to dd-mm-yyyy
+    const certificateDate = normalizeDateFormat(rawDateInput);
 
     // Search for the certificate
-    const certificate = certificates.find(cert => 
-        cert.certificateNumber === certificateNumber && cert.issueDate === certificateDate
+    const certificate = certificates.find(
+      (cert) =>
+        cert.certificateNumber === certificateNumber &&
+        cert.issueDate === certificateDate
     );
 
     // Update the paragraph elements
     if (certificate) {
-        searchedCertificate.classList.add("hidden");
-        searchResult.classList.remove("hidden");
-        document.getElementById('display-certificate-number').textContent = certificate.certificateNumber;
-        document.getElementById('display-student-name').textContent = certificate.studentName;
-        document.getElementById('display-company-name').textContent = certificate.companyName;
-        document.getElementById('display-college-name').textContent = certificate.collegeName;
-        document.getElementById('display-issue-date').textContent = certificate.issueDate;
-        document.getElementById('display-certificate-standard').textContent = certificate.certificateStandard;
+      searchedCertificate.classList.add("hidden");
+      searchResult.classList.remove("hidden");
+      document.getElementById("display-certificate-number").textContent =
+        certificate.certificateNumber;
+      document.getElementById("display-student-name").textContent =
+        certificate.studentName;
+      document.getElementById("display-company-name").textContent =
+        certificate.companyName;
+      document.getElementById("display-college-name").textContent =
+        certificate.collegeName;
+      document.getElementById("display-issue-date").textContent =
+        certificate.issueDate;
+      document.getElementById("display-certificate-standard").textContent =
+        certificate.certificateStandard;
     } else {
-        searchedCertificate.classList.remove("hidden");
-         showModal(); 
+      searchedCertificate.classList.remove("hidden");
+      showModal(); // Show the error modal
     }
-});
+  });
 
+// Helper function to normalize date formats
+function normalizeDateFormat(dateString) {
+  // if (!dateString) return null;
+
+  if (dateString.includes("/")) {
+    // If format is dd/mm/yyyy, convert it to dd-mm-yyyy
+    const [day, month, year] = dateString.split("/");
+    return `${day}-${month}-${year}`;
+  }
+
+  // Return the input directly if it's already in the correct format
+  return dateString;
+}
