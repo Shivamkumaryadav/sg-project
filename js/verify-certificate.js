@@ -16,7 +16,7 @@ const certificates = [
     companyName: "SGTech Technology Pvt Ltd",
     studentName: "Prashant Upadhyay",
     collegeName: "Shambhunath Institute of Engg & Technology",
-    issueDate: "2024-10-25",
+    issueDate: "2024-10-15",
     certificateStandard: "ISO : 9001:2015",
   },
   {
