@@ -138,7 +138,7 @@ document
 
 // Helper function to normalize date formats
 function normalizeDateFormat(dateString) {
-  // if (!dateString) return null;
+  // if (!dateString) return null; 
 
   if (dateString.includes("/")) {
     // If format is dd/mm/yyyy, convert it to dd-mm-yyyy
