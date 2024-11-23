@@ -87,7 +87,7 @@ const certificates = [
     certificateNumber: "SGTechSt24639364",
     companyName: "SGTech Technology Pvt Ltd",
     studentName: "Sunil Maurya",
-    collegeName: "Shambhunath institute of engineering & technology",
+    collegeName: "Shambhunath Institute of Engineering & Technology",
     issueDate: "2024-10-11",
     certificateStandard: "ISO : 9001:2015",
   },
@@ -95,7 +95,7 @@ const certificates = [
     certificateNumber: "SGTechSt24639365",
     companyName: "SGTech Technology Pvt Ltd",
     studentName: "Shivansh Pradhan",
-    collegeName: "Shambhunath institute of engineering & technology",
+    collegeName: "Shambhunath Institute of Engineering & Technology",
     issueDate: "2024-10-12",
     certificateStandard: "ISO : 9001:2015",
   },
@@ -149,7 +149,6 @@ const certificates = [
   },
 ];
 
-
 // Function to show the modal
 function showModal() {
   document.getElementById("popup-modal").classList.remove("hidden");
@@ -199,6 +198,7 @@ document
         certificate.companyName;
       document.getElementById("display-college-name").textContent =
         certificate.collegeName;
+      console.log(certificate.collegeName);
       document.getElementById("display-issue-date").textContent =
         certificate.issueDate;
       document.getElementById("display-certificate-standard").textContent =
@@ -211,7 +211,7 @@ document
 
 // Helper function to normalize date formats
 function normalizeDateFormat(dateString) {
-  // if (!dateString) return null; 
+  // if (!dateString) return null;
 
   if (dateString.includes("/")) {
     // If format is dd/mm/yyyy, convert it to dd-mm-yyyy
