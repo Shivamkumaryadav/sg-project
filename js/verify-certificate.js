@@ -104,7 +104,7 @@ const certificates = [
     companyName: "SGTech Technology Pvt Ltd",
     studentName: "Kajal Shrivastava",
     collegeName: "Kashi Institute Of Technology Varanasi",
-    issueDate: "2024-08-30",
+    issueDate: "2024-08-26",
     certificateStandard: "ISO : 9001:2015",
   },
   {
