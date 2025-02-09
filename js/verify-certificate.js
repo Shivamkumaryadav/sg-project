@@ -147,6 +147,14 @@ const certificates = [
     issueDate: "2024-09-28",
     certificateStandard: "ISO : 9001:2015",
   },
+  {
+    certificateNumber: "SGTechSt24639303",
+    companyName: "SGTech Technology Pvt Ltd",
+    studentName: "Shyam Sharma",
+    collegeName: "Goverment Polytechnic Mirjapur",
+    issueDate: "2024-12-11",
+    certificateStandard: "ISO : 9001:2015",
+  },
 ];
 
 // Function to show the modal
