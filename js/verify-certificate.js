@@ -155,6 +155,14 @@ const certificates = [
     issueDate: "2024-12-11",
     certificateStandard: "ISO : 9001:2015",
   },
+  {
+    certificateNumber: "SGTechSt24639304",
+    companyName: "SGTech Technology Pvt Ltd",
+    studentName: "Abhishek kumar Kushwaha",
+    collegeName: "Shambhunath Institute Of Engineering & Technology",
+    issueDate: "2024-12-20",
+    certificateStandard: "ISO : 9001:2015",
+  },
 ];
 
 // Function to show the modal
